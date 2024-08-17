@@ -7,6 +7,7 @@ public class EvilDoman : MonoBehaviour
 {
     public VariableTimer timerLive;
     public SpriteRenderer player;
+    public GameObject bg;
     public int state = 0;
 
     // Start is called before the first frame update
@@ -25,12 +26,14 @@ public class EvilDoman : MonoBehaviour
             Debug.Log("quuutas");
         }
         if(timerLive.finished && state == 0){
+            bg.GetComponent<Animator>().Play("gut");
             state = 1;
             timerLive.ResetTimer();
             timerLive.StartTimer(2.5f);
 
         }
         if(timerLive.finished && state == 1){
+            bg.GetComponent<Animator>().Play("idlebg");
             state = 0;
             timerLive.ResetTimer();
             timerLive.StartTimer(10.5f);

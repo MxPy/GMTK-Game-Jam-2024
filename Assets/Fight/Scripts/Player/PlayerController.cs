@@ -23,6 +23,10 @@ namespace TarodevController
         private bool _cachedQueryStartInColliders;
         private bool isFacingRight = true;
 
+        public GameObject lastTarget;
+
+        bool disableIdle = false;
+
         #region Interface
 
         public Vector2 FrameInput => _frameInput.Move;
@@ -48,6 +52,7 @@ namespace TarodevController
         public void Death(){
             Debug.Log("player died");
         }
+        
 
         private void Update()
         {
@@ -56,14 +61,30 @@ namespace TarodevController
             HandleAttack();
             if (_frameInput.Move.x == 0)
             {
-                //GetComponent<Animator>().SetBool("isRunning", false);
+                if(!disableIdle){
+                    GetComponent<Animator>().Play("idle");
+                }
+                
             }
             else
             {
-                //GetComponent<Animator>().SetBool("isRunning", true);
+                GetComponent<Animator>().Play("playerMovment");
             }
             
 
+        }
+
+        public void PreHid(){
+            disableIdle = true;
+        }
+
+        public void Hid(){
+                Debug.Log("fdghfgh");
+                GetComponent<Animator>().Play("idle");
+                lastTarget.GetComponent<change>().exchange();
+                disableIdle = false;
+                GetComponent<SpriteRenderer>().enabled = false;
+                GetComponent<PlayerController>().enabled = false;
         }
 
         private void GatherInput()
@@ -102,9 +123,9 @@ namespace TarodevController
         private void flipSprite()
         {
             if(isFacingRight){
-                GetComponent<SpriteRenderer>().flipX = true;
-            }else{
                 GetComponent<SpriteRenderer>().flipX = false;
+            }else{
+                GetComponent<SpriteRenderer>().flipX = true;
             }
             isFacingRight = !isFacingRight;
         }

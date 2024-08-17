@@ -2,13 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TarodevController;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
     bool isHiden = false;
-    bool isInteractingWithSpot = false;
+    public bool isInteractingWithSpot = false;
+    public bool isInteractingWithInteraction = false;
+    public Animator animator;
     GameObject player;
+    GameObject lastTarget;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,17 +25,27 @@ public class Interaction : MonoBehaviour
         if(isInteractingWithSpot){
             
             if(Input.GetKeyDown(KeyCode.F) && !isHiden){
+                animator.Play("succ");
                 Debug.Log("chujj");
-                player.GetComponent<SpriteRenderer>().enabled = false;
-                player.GetComponent<PlayerController>().enabled = false;
+                //player.GetComponent<SpriteRenderer>().enabled = false;
+                //player.GetComponent<PlayerController>().enabled = false;
+                player.GetComponent<PlayerController>().lastTarget = lastTarget;
                 isHiden = true;
             }else if(Input.GetKeyDown(KeyCode.F) && isHiden){
+                animator.Play("idle");
                 Debug.Log("chujj2");
                 player.GetComponent<SpriteRenderer>().enabled = true;
                 player.GetComponent<PlayerController>().enabled = true;
+                lastTarget.GetComponent<change>().exchange();
+                player.GetComponent<PlayerController>().lastTarget = null;
                 isHiden = false;
             }
             
+        }
+
+        if(Input.GetKeyDown(KeyCode.F) && isInteractingWithInteraction){
+            Debug.Log("digkfhjnnli");
+            lastTarget.GetComponent<InteractiveObject>().interaction();
         }
         
     }
@@ -43,10 +57,26 @@ public class Interaction : MonoBehaviour
     /// <param name="other">The Collision2D data associated with this collision.</param>
     void OnCollisionStay2D(Collision2D other)
     {
+
         if (other.gameObject.tag == "HidenSpot"){
             isInteractingWithSpot = true;
-        }else{
-            isInteractingWithSpot = false;
+            lastTarget = other.gameObject;
         }
+        else if (other.gameObject.tag == "Interaction"){
+            isInteractingWithInteraction = true;
+            lastTarget = other.gameObject;
+        }
+    }
+
+     /// <summary>
+    /// Sent when a collider on another object stops touching this
+    /// object's collider (2D physics only).
+    /// </summary>
+    /// <param name="other">The Collision2D data associated with this collision.</param>
+    void OnCollisionExit2D(Collision2D other)
+    {
+        isInteractingWithSpot = false;
+        isInteractingWithInteraction = false;
+        lastTarget = null;
     }
 }
