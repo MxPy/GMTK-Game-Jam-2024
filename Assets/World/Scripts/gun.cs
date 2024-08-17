@@ -8,6 +8,8 @@ public class gun : MonoBehaviour
     public GameObject flashbang;
 
     public GameObject exit;
+    public GameObject exit2;
+
 
     public float flashhh = 1;
 
@@ -32,12 +34,14 @@ public class gun : MonoBehaviour
         if(flashhh>0 && doIt){
             flashbang.SetActive(true);
             exit.SetActive(true);
+            exit2.SetActive(true);
             gameObject.GetComponent<Animator>().Play("idle2");
             flashbang.GetComponent<SpriteRenderer>().color = new Color(1,1,1,flashhh);
             gameObject.GetComponent<Shini>().enabled = false;
             gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             gameObject.tag = "Untagged";
             flashhh-=0.1f*Time.deltaTime;
+
         }
     }
 }
