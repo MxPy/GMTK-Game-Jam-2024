@@ -13,7 +13,7 @@ public class TextScroll : MonoBehaviour
     public float speed = 1.0f;
     public int stopPositionY = 3;
 
-    public float timeToShow = 3f;
+    public float timeToShow = 2f;
 
     private bool hasStopped = false;
 
