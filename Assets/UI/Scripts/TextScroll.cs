@@ -8,6 +8,8 @@ public class TextScroll : MonoBehaviour
     public Transform scrollingText;
     public Button ExitButton;
     public Transform MenuContainer;
+    public Transform Title;
+    public Transform Scale;
     public float speed = 1.0f;
     public int stopPositionY = 3;
 
@@ -18,6 +20,8 @@ public class TextScroll : MonoBehaviour
     void Start()
     {
         MenuContainer.gameObject.SetActive(false);
+        Title.gameObject.SetActive(false);
+        Scale.gameObject.SetActive(false);
         ExitButton.gameObject.SetActive(false);
         Invoke("ShowButton", timeToShow);
     }
@@ -45,6 +49,8 @@ public class TextScroll : MonoBehaviour
             ExitButton.gameObject.SetActive(false);
             scrollingText.gameObject.SetActive(false);
             MenuContainer.gameObject.SetActive(true);
+            Title.gameObject.SetActive(true);
+            Scale.gameObject.SetActive(true);
         }
     }
 }
