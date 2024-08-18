@@ -31,6 +31,15 @@ public class TextScroll : MonoBehaviour
         ExitButton.gameObject.SetActive(true);
     }
 
+    public void EndIntro()
+    {
+        ExitButton.gameObject.SetActive(false);
+        scrollingText.gameObject.SetActive(false);
+        MenuContainer.gameObject.SetActive(true);
+        Title.gameObject.SetActive(true);
+        Scale.gameObject.SetActive(true);
+    }
+
     void Update()
     {
         if (!hasStopped)
@@ -46,11 +55,7 @@ public class TextScroll : MonoBehaviour
         }
         else
         {
-            ExitButton.gameObject.SetActive(false);
-            scrollingText.gameObject.SetActive(false);
-            MenuContainer.gameObject.SetActive(true);
-            Title.gameObject.SetActive(true);
-            Scale.gameObject.SetActive(true);
+            EndIntro();
         }
     }
 }
