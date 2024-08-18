@@ -4233,6 +4233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60f09e28b79f81488f9bb8f00ac4f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exitTo: kibel
 --- !u!1 &1651454780
 GameObject:
   m_ObjectHideFlags: 0
@@ -4823,6 +4824,9 @@ MonoBehaviour:
   bg: {fileID: 789321335}
   typee: 0
   state: 0
+  time1: 8.5
+  time2: 2.5
+  time3: 10.5
 --- !u!114 &1712033847
 MonoBehaviour:
   m_ObjectHideFlags: 0

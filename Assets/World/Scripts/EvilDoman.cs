@@ -11,10 +11,14 @@ public class EvilDoman : MonoBehaviour
     public int typee = 0;
     public int state = 0;
 
+    public float time1 = 7.25f;
+    public float time2 = 2.25f;
+    public float time3 = 7.75f;
+
     // Start is called before the first frame update
     void Start()
     {
-        timerLive.StartTimer(7.25f);
+        timerLive.StartTimer(time1);
     }
 
     // Update is called once per frame
@@ -35,7 +39,7 @@ public class EvilDoman : MonoBehaviour
             
             state = 1;
             timerLive.ResetTimer();
-            timerLive.StartTimer(2.25f);
+            timerLive.StartTimer(time2);
 
         }
         if(timerLive.finished && state == 1){
@@ -46,7 +50,7 @@ public class EvilDoman : MonoBehaviour
             }
             state = 0;
             timerLive.ResetTimer();
-            timerLive.StartTimer(7.75f);
+            timerLive.StartTimer(time3);
         }
     }
 }
