@@ -6,9 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/SampleScenes/Menu.unity
+    guid: a9d64587cb208df4f870340ac47c3e6d
+  - enabled: 1
     path: Assets/SampleScenes/fight.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/SampleScenes/kibel.unity
     guid: f28e5761718be75439545cac7bb51b57
+  - enabled: 1
+    path: Assets/SampleScenes/gtmktest.unity
+    guid: 7f05fade74493864b8720fd6ed77233d
+  - enabled: 1
+    path: Assets/SampleScenes/Intro.unity
+    guid: 0cb525c2fbb382b4b98a7ef5623f8484
   m_configObjects: {}
