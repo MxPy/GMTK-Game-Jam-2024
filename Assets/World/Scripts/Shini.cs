@@ -21,7 +21,7 @@ public class Shini : MonoBehaviour
     void Update()
     {
         if(timer.finished && state == 0){
-            gameObject.GetComponent<SpriteRenderer>().color = new Color(0.7f, 1, 1, 1);
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0.7f, 1, 1);
             state = 1;
             timer.ResetTimer();
             timer.StartTimer(1/freq);

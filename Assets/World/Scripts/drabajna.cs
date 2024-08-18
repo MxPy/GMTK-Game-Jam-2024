@@ -23,6 +23,7 @@ public class drabajna : MonoBehaviour
             dabTop.SetActive(true);
         }else{
             dabTop.SetActive(false);
+            
         }
         
     }

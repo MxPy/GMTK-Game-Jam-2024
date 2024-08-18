@@ -8,12 +8,13 @@ public class EvilDoman : MonoBehaviour
     public VariableTimer timerLive;
     public SpriteRenderer player;
     public GameObject bg;
+    public int typee = 0;
     public int state = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        timerLive.StartTimer(8.5f);
+        timerLive.StartTimer(7.25f);
     }
 
     // Update is called once per frame
@@ -26,17 +27,26 @@ public class EvilDoman : MonoBehaviour
             Debug.Log("quuutas");
         }
         if(timerLive.finished && state == 0){
-            bg.GetComponent<Animator>().Play("gut");
+            if(typee == 0){
+                bg.GetComponent<Animator>().Play("gut");
+            }else if(typee == 1){
+                bg.GetComponent<Animator>().Play("stary");
+            }
+            
             state = 1;
             timerLive.ResetTimer();
-            timerLive.StartTimer(2.5f);
+            timerLive.StartTimer(2.25f);
 
         }
         if(timerLive.finished && state == 1){
-            bg.GetComponent<Animator>().Play("idlebg");
+            if(typee == 0){
+                bg.GetComponent<Animator>().Play("idlebg");
+            }else if(typee == 1){
+                bg.GetComponent<Animator>().Play("idles3");
+            }
             state = 0;
             timerLive.ResetTimer();
-            timerLive.StartTimer(10.5f);
+            timerLive.StartTimer(7.75f);
         }
     }
 }

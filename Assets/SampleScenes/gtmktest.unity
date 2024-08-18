@@ -1412,7 +1412,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d88d785354db58441b1afa36e484967a, type: 3}
-  m_Color: {r: 0.5507298, g: 0.9811321, b: 0.90377223, a: 0}
+  m_Color: {r: 0.5507298, g: 0.9811321, b: 0.90377223, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3342,8 +3342,8 @@ Transform:
   m_GameObject: {fileID: 1238634586}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.70684236, w: 0.7073712}
-  m_LocalPosition: {x: 3.557, y: -2.867, z: 0}
-  m_LocalScale: {x: 1.2107625, y: 0.96141845, z: 1}
+  m_LocalPosition: {x: 3.557, y: -2.8464, z: 0}
+  m_LocalScale: {x: 1.1930854, y: 0.96141845, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4821,6 +4821,7 @@ MonoBehaviour:
   timerLive: {fileID: 1712033847}
   player: {fileID: 1815361281}
   bg: {fileID: 789321335}
+  typee: 0
   state: 0
 --- !u!114 &1712033847
 MonoBehaviour:
@@ -5085,6 +5086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stats: {fileID: 11400000, guid: 942ce02f0be91a741926211e1c1d9d93, type: 2}
   lastTarget: {fileID: 0}
+  _grounded: 0
 --- !u!50 &1815361284
 Rigidbody2D:
   serializedVersion: 4

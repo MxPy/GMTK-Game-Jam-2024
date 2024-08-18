@@ -8,6 +8,7 @@ TagManager:
   - HidenSpot
   - Item
   - Interaction
+  - Kill
   layers:
   - Default
   - TransparentFX
