@@ -13,7 +13,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Buttons
   - Water
   - UI
   - rtfhrfth
@@ -54,6 +54,9 @@ TagManager:
     locked: 0
   - name: PlayersUI
     uniqueID: 385266165
+    locked: 0
+  - name: Buttons
+    uniqueID: 2756379901
     locked: 0
   - name: UI
     uniqueID: 3714259147
