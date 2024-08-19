@@ -2046,7 +2046,7 @@ MonoBehaviour:
   speed: 1
   stopPositionY: 15
   timeToShow: 3
-  startSceneName: gtmktest
+  startSceneName: intro
 --- !u!1 &2025820854
 GameObject:
   m_ObjectHideFlags: 0

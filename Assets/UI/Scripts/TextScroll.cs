@@ -16,7 +16,7 @@ public class TextScroll : MonoBehaviour
     public int stopPositionY = 3;
 
     public float timeToShow = 2f;
-    public string startSceneName = "gtmktest";
+    public string startSceneName = "intro";
 
     private bool hasStopped = false;
 

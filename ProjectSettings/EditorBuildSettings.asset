@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/SampleScenes/fdg.unity
-    guid: a9d64587cb208df4f870340ac47c3e6d
+    path: Assets/UI/Scenes/menu.unity
+    guid: 113cf3d3fd63b9149872c97ba0d8b19f
   - enabled: 1
     path: Assets/SampleScenes/fight.unity
     guid: 2cda990e2423bbf4892e6590ba056729
@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SampleScenes/kuniec.unity
     guid: cda2e3f61e464f548b9d428e1160945b
+  - enabled: 1
+    path: Assets/SampleScenes/chuj.unity
+    guid: b405d0ced746b7c498be380edb3030f3
+  - enabled: 0
+    path: Assets/SampleScenes/fdg.unity
+    guid: a9d64587cb208df4f870340ac47c3e6d
   m_configObjects: {}
