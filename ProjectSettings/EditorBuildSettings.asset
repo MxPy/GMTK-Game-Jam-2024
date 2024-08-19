@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/SampleScenes/Menu.unity
+    path: Assets/SampleScenes/fdg.unity
     guid: a9d64587cb208df4f870340ac47c3e6d
   - enabled: 1
     path: Assets/SampleScenes/fight.unity
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SampleScenes/Intro.unity
     guid: 0cb525c2fbb382b4b98a7ef5623f8484
+  - enabled: 1
+    path: Assets/SampleScenes/kuniec.unity
+    guid: cda2e3f61e464f548b9d428e1160945b
   m_configObjects: {}

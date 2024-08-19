@@ -14,6 +14,7 @@ public class Interaction : MonoBehaviour
     public Animator animator;
     GameObject player;
     GameObject lastTarget;
+    public string restartSene = "gtmktest";
     // Start is called before the first frame update
     void Start()
     {
@@ -77,7 +78,7 @@ public class Interaction : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
          if (other.gameObject.tag == "Kill"){
-            SceneManager.LoadScene("gtmktest");
+            SceneManager.LoadScene(restartSene);
          }
     }
 
