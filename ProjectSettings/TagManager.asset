@@ -9,6 +9,7 @@ TagManager:
   - Item
   - Interaction
   - Kill
+  - Canvas
   layers:
   - Default
   - TransparentFX
