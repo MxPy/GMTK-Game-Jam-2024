@@ -81,7 +81,7 @@ namespace TarodevController
         public void Hid(){
                 Debug.Log("fdghfgh");
                 GetComponent<Animator>().Play("idle");
-                lastTarget.GetComponent<change>().exchange();
+                lastTarget.GetComponent<change>().exchange(0);
                 disableIdle = false;
                 GetComponent<SpriteRenderer>().enabled = false;
                 GetComponent<PlayerController>().enabled = false;

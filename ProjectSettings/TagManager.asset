@@ -10,6 +10,7 @@ TagManager:
   - Interaction
   - Kill
   - Canvas
+  - timer
   layers:
   - Default
   - TransparentFX

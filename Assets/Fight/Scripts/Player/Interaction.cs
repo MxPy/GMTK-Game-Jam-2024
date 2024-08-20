@@ -14,6 +14,7 @@ public class Interaction : MonoBehaviour
     public Animator animator;
     GameObject player;
     GameObject lastTarget;
+    public GameObject fK;
     public string restartSene = "gtmktest";
     // Start is called before the first frame update
     void Start()
@@ -38,7 +39,7 @@ public class Interaction : MonoBehaviour
                 Debug.Log("chujj2");
                 player.GetComponent<SpriteRenderer>().enabled = true;
                 player.GetComponent<PlayerController>().enabled = true;
-                lastTarget.GetComponent<change>().exchange();
+                lastTarget.GetComponent<change>().exchange(1);
                 player.GetComponent<PlayerController>().lastTarget = null;
                 isHiden = false;
             }
@@ -59,12 +60,14 @@ public class Interaction : MonoBehaviour
     /// <param name="other">The Collision2D data associated with this collision.</param>
     void OnCollisionStay2D(Collision2D other)
     {
-
+        
         if (other.gameObject.tag == "HidenSpot"){
+            fK.SetActive(true);
             isInteractingWithSpot = true;
             lastTarget = other.gameObject;
         }
         else if (other.gameObject.tag == "Interaction"){
+            fK.SetActive(true);
             isInteractingWithInteraction = true;
             lastTarget = other.gameObject;
         }
@@ -89,6 +92,7 @@ public class Interaction : MonoBehaviour
     /// <param name="other">The Collision2D data associated with this collision.</param>
     void OnCollisionExit2D(Collision2D other)
     {
+        if(fK) fK.SetActive(false);
         isInteractingWithSpot = false;
         isInteractingWithInteraction = false;
         lastTarget = null;
