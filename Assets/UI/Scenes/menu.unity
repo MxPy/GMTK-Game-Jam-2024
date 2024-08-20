@@ -2191,6 +2191,9 @@ GameObject:
   - component: {fileID: 2084211784}
   - component: {fileID: 2084211783}
   - component: {fileID: 2084211782}
+  - component: {fileID: 2084211787}
+  - component: {fileID: 2084211786}
+  - component: {fileID: 2084211785}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2272,6 +2275,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2084211785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084211781}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66c6eaf00d1cf0b45baeae2fc9bd8534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 017aa748459fc0b43a93b3126820b82a, type: 3}
+  changeInterval: 0
+  animationDuration: 0
+  scanlineIntensity: 0
+  scanlineThickness: 0
+  scanlineSpeed: 0
+  verticalOffset: 0
+  distortionStrength: 0.011
+  distortionOffset: 0.006
+  glitchIntensity: 0
+  staticLinesIntensity: 0
+  staticLinesSize: 0
+  colorShift: 0.006
+  tapeJitter: 0.02
+  jitterEnabled: 0
+  waveFrequency: 0.17
+  waveAmplitude: 0
+  waveSpeed: 0
+--- !u!114 &2084211786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084211781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e1c3b1bfa5510647855d1fa253d3fe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pixelArtFilter: {fileID: 4800000, guid: c1aeceedccb76c9409d213f2f3981d82, type: 3}
+  downSamples: 1
+--- !u!114 &2084211787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084211781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb1f4d60a61688e458905398af2547b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crtShader: {fileID: 4800000, guid: 0713b614634e61a4781dfc9c1d5b1557, type: 3}
+  image: {fileID: 0}
+  useImage: 0
+  curvature: 3.27
+  vignetteWidth: 100
 --- !u!1 &2114136809
 GameObject:
   m_ObjectHideFlags: 0
